@@ -19,11 +19,16 @@ npm run build
 ```
 npm run lint
 ```
-### Install Router(현재 호환되는 버전)
+### Install Router
 ```
 npm install vue-router@next
 ```
 
+### Install Axios
+```
+vue에서 권고하는 Http통신 라이브러리
+npm install axios
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
