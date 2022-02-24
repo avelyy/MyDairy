@@ -7,10 +7,10 @@ module.exports = {
     devServer: {
         //개발환경에서 특정 URL에 대해 프론트앤드에서 처리할지 백앤드에서 처리할지 설정
         proxy: {
-            '/api': {
+            '/login': {
                 target: 'http://localhost:9000',
-                ws: true,
-                changeOrigin: true
+                pathRewrite: { '^/': ''},
+                ws: true
             }
         }
     },
