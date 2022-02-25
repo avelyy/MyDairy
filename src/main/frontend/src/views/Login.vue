@@ -1,6 +1,7 @@
 <script setup>
 import axios from 'axios'
 import {reactive} from "vue";
+import router from "@/router";
 
 
 const data = reactive({
@@ -19,8 +20,9 @@ const login = async () => {
       }
     });
     console.log("[result.status]: " + result.status);
-    if (result.status === 200) {
+    if (result.status === 200 && result.data === "OK") {
       data.loginState = true
+      await router.push({path: "/my-dairy"});
     }
   } catch (err) {
     data.loginState = false;
@@ -37,7 +39,7 @@ const login = async () => {
     <form @submit.prevent="login">
         <input type="text" placeholder="id" v-model="data.id">
         <input type="password" placeholder="password" v-model="data.password">
-      <button variant="success" type="submit">Login</button>
+      <b-button variant="primary">Login</b-button>
     </form>
 
     <p v-if="data.error" class="error">Bad login information</p>

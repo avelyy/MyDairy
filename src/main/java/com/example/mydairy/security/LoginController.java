@@ -15,6 +15,7 @@ public class LoginController {
   @RequestMapping("/login")
   public String login(HttpServletRequest request, HttpServletResponse response) {
     LOG.info("GET successfully called on /login resource");
+    //[ToDo] Security 인증
     return "OK";
   }
 

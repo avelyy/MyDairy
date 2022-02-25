@@ -11,7 +11,8 @@ const routes = [
     {
         path: "/my-dairy",
         name: "Home",
-        component: () => import("@/views/Home")
+        component: () => import("@/views/Landing")
+        //component: () => import("@/views/Home")
     }
 ];
 
