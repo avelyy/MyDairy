@@ -1,5 +1,10 @@
 module.exports = {
   presets: [
-    '@vue/cli-plugin-babel/preset'
+    [
+      "@vue/app",
+      {
+        "polyfills": ["es.object.entries", "es.promise"]
+      }
+    ]
   ]
-}
+};
